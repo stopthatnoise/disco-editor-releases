@@ -4,6 +4,22 @@ All notable changes to Disco Editor are listed here.
 
 ---
 
+## [1.2.0] — 2026-03-08
+
+### Changed
+- **Major codebase refactoring** — split monolithic `server.mjs` (2010 lines) into modular structure: backend modules in `lib/`, frontend assets in `public/`. Server is now a 284-line routing layer. No functionality changes
+- **Renamed to Disco Editor** — unified branding across all files, window title, and UI (was "Disco BE Editor" / "Рэдактар BE")
+- **Installer filename** — now `Disco-Editor-Setup-1.2.0.exe` instead of `Disco.Editor.Setup.1.0.0.exe`
+
+### Added
+- **App icon** — custom icon for Electron window, GNOME taskbar, and Windows installer
+- **About modal** — version, description, and repository links accessible via `?` button in the top bar
+
+### Fixed
+- Global search modal was visible behind other modals due to CSS specificity issue
+
+---
+
 ## [1.1.0] — 2026-03-08
 
 ### Fixed
