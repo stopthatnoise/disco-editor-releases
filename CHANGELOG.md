@@ -4,6 +4,19 @@ All notable changes to Disco Editor are listed here.
 
 ---
 
+## [1.1.0] — 2026-03-08
+
+### Fixed
+- Zoom shortcuts (`Ctrl++` / `Ctrl+-` / `Ctrl+0`) were broken due to hidden menu bar — replaced with a direct `webContents` input handler
+
+### Added
+- **Undo / Redo** — `Ctrl+Z` / `Ctrl+Shift+Z` (or `Ctrl+Y`) with toolbar buttons; history is per-session and clears on dialogue load
+- **Search highlighting** — matching text highlighted inline across all language rows when search field has 3+ characters; editable BE textareas get a subtle tint
+- **Persist working directory** — selected folder is saved to config and restored on next launch
+- **Restore last session** — last opened dialogue and focused node are saved and restored when the app starts
+
+---
+
 ## [1.0.0] — 2026-03-08
 
 Initial public release.
