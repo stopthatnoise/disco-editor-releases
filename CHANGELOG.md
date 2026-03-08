@@ -4,6 +4,23 @@ All notable changes to Disco Editor are listed here.
 
 ---
 
+## [1.3.0] — 2026-03-08
+
+### Added
+- **Branch switching** — click the branch name in the git bar to open a list of local branches; click any to switch; warns if there are uncommitted or unsaved changes; reloads the current dialogue after switching
+- **Translation diff in commit modal** — shows changed `belarusian` fields as mini-nodes with before/after text and word-level LCS highlighting (changed words marked with coloured backgrounds)
+- **Single-file commit toggle** — checkbox in commit modal (on by default) that limits staging to the current dialogue file only; the file list and diff update live when toggled
+- **Discard per node** — ↩ button on each diff mini-node reverts that field to the HEAD version without affecting the rest of the file
+- **PR Review Comments sidebar** — 💬 Рэв'ю button opens a right sidebar showing all open review threads for the current branch's PR; threads include replies and formatted diff hunks with coloured lines (+/−/@@ syntax highlighting)
+- **Auto node-matching** — on sidebar load, each review thread is automatically matched to a node using a multi-level search: `articyId` → `english` → `polish` → `belarusian`; clicking a comment navigates directly to the matched node
+- **Reply from sidebar** — textarea under each thread posts replies to GitHub directly from the editor
+- **PR button guard** — "Стварыць PR" button is disabled when an open PR already exists for the current branch
+
+### Fixed
+- Commit modal discard handler crashed with an unreadable error when the server had not been restarted after an update
+
+---
+
 ## [1.2.0] — 2026-03-08
 
 ### Changed
